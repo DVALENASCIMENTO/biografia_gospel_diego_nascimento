@@ -1,0 +1,321 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  scroll-behavior:smooth;
+}
+
+body{
+  background:#0a0a0a;
+  color:#f1f1f1;
+  font-family:Georgia, serif;
+  overflow-x:hidden;
+}
+
+.hero{
+  height:100vh;
+  background:
+  linear-gradient(rgba(0,0,0,.75), rgba(0,0,0,.85)),
+  url('../img/background.jpg');
+
+  background-size:cover;
+  background-position:center;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  text-align:center;
+  position:relative;
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+  max-width:900px;
+  padding:20px;
+}
+
+.subtitle{
+  color:#c8a96b;
+  letter-spacing:4px;
+  text-transform:uppercase;
+  font-size:14px;
+}
+
+.hero h1{
+  font-size:5rem;
+  margin-top:20px;
+  margin-bottom:20px;
+  color:#fff;
+}
+
+.hero p{
+  font-size:1.3rem;
+  color:#ddd;
+  line-height:1.8;
+}
+
+.hero button{
+  margin-top:40px;
+  padding:16px 35px;
+
+  border:none;
+  border-radius:50px;
+
+  background:#c8a96b;
+  color:#000;
+
+  cursor:pointer;
+  font-weight:bold;
+
+  transition:.4s;
+}
+
+.hero button:hover{
+  transform:scale(1.05);
+  background:#fff;
+}
+
+nav{
+  background:#111;
+  padding:20px;
+
+  display:flex;
+  justify-content:center;
+  gap:40px;
+
+  position:sticky;
+  top:0;
+  z-index:999;
+}
+
+nav a{
+  color:#fff;
+  text-decoration:none;
+  transition:.3s;
+}
+
+nav a:hover{
+  color:#c8a96b;
+}
+
+.section{
+  padding:120px 10%;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+  align-items:center;
+}
+
+.images{
+  display:grid;
+  gap:20px;
+}
+
+.images img{
+  width:100%;
+  border-radius:15px;
+}
+
+.content h2,
+.center h2,
+.mission h2,
+.spiritual-box h2{
+  font-size:3rem;
+  margin-bottom:30px;
+  color:#c8a96b;
+}
+
+.content p,
+.center p,
+.mission p,
+.spiritual-box p{
+  line-height:2;
+  color:#ddd;
+  font-size:1.1rem;
+}
+
+.dark{
+  background:#111;
+}
+
+.center{
+  max-width:1000px;
+  margin:auto;
+  text-align:center;
+}
+
+.large{
+  max-width:1100px;
+  margin:auto;
+}
+
+.large h3{
+  color:#c8a96b;
+  margin-bottom:20px;
+  margin-top:30px;
+  font-size:1.5rem;
+}
+
+.spiritual{
+  background:
+  linear-gradient(rgba(0,0,0,.85), rgba(0,0,0,.90)),
+  url('../img/spiritual.jpg');
+
+  background-size:cover;
+  background-position:center;
+}
+
+.spiritual-box{
+  max-width:900px;
+  margin:auto;
+  text-align:center;
+}
+
+blockquote{
+  margin-top:30px;
+  padding:30px;
+  border-left:5px solid #c8a96b;
+  background:#111;
+  font-style:italic;
+  line-height:2;
+}
+
+.discografia{
+  padding:100px 20px;
+  text-align:center;
+}
+
+.discografia-btn{
+  display:inline-block;
+  padding:18px 40px;
+
+  border-radius:50px;
+
+  background:#c8a96b;
+  color:#000;
+
+  text-decoration:none;
+  font-weight:bold;
+
+  transition:.4s;
+}
+
+.discografia-btn:hover{
+  transform:scale(1.05);
+  background:#fff;
+}
+
+footer{
+  background:#050505;
+  padding:50px 20px;
+  text-align:center;
+  color:#999;
+}
+
+footer h3{
+  color:#c8a96b;
+  margin-bottom:20px;
+}
+
+#topBtn{
+  position:fixed;
+  right:20px;
+  bottom:20px;
+
+  width:50px;
+  height:50px;
+
+  border:none;
+  border-radius:50%;
+
+  background:#c8a96b;
+  color:#000;
+
+  cursor:pointer;
+  display:none;
+}
+
+@media(max-width:900px){
+
+  .grid{
+    grid-template-columns:1fr;
+  }
+
+  .hero h1{
+    font-size:3rem;
+  }
+
+  nav{
+    gap:20px;
+    flex-wrap:wrap;
+  }
+
+}
+
+.timeline-card{
+  display:flex;
+  align-items:center;
+  gap:50px;
+
+  margin-top:80px;
+  padding:30px;
+
+  background:#111;
+  border-radius:20px;
+
+  overflow:hidden;
+
+  transition:.5s;
+}
+
+.timeline-card:hover{
+  transform:translateY(-5px);
+}
+
+.timeline-card img{
+  width:420px;
+  height:320px;
+
+  object-fit:cover;
+
+  border-radius:15px;
+}
+
+.timeline-text{
+  flex:1;
+}
+
+.timeline-text h3{
+  color:#c8a96b;
+  margin-bottom:20px;
+  font-size:2rem;
+}
+
+.timeline-text p{
+  color:#ddd;
+  line-height:2;
+  font-size:1.05rem;
+}
+
+.reverse{
+  flex-direction:row-reverse;
+}
+
+@media(max-width:900px){
+
+  .timeline-card,
+  .reverse{
+    flex-direction:column;
+  }
+
+  .timeline-card img{
+    width:100%;
+    height:auto;
+  }
+
+}
